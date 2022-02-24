@@ -23,8 +23,6 @@ async function run() {
         const database = client.db("Zignaly");
         const phonesCollection = database.collection("phones");
 
-        // all api are here let's solve it
-        // get services
         app.get('/phones', async (req, res) => {
             const cursor = phonesCollection.find({});
             const phones = await cursor.toArray();
